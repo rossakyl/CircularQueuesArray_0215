@@ -4,6 +4,7 @@ using namespace std;
 class Queues
 {
 private:
+    static const int max = 5;
     int FRONT, REAR, max = 5;
     int queue_array[5];
 
@@ -25,6 +26,12 @@ public:
         {
             cout << "\nQueue overflow\n";
             return;
+        }
+        // cek apakah antrian kosong
+        if (FRONT == -1)
+        {
+            FRONT = 0;
+            REAR = 0;
         }
     }
 };
